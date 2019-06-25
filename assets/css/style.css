@@ -1,0 +1,45 @@
+html ,body{
+  margin: 0;
+padding: 0;
+height: 100%;
+width: 100%;
+font-size: 16px;
+background-color: aquamarine;
+}
+.intro{
+  height: 100%;
+  width: 100%;
+  margin: auto;
+ /* background-image: (images.jpg) no-repeat 50% 50%;*/
+  display: table;
+  top:0;
+  background-size: cover;
+}
+.intro .inner{
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  max-width: none;
+}
+.content{
+  max-width: 500px;
+  margin-left: 350px;
+  text-align: center;
+}
+.content h1{
+  font-family: 'Times New Roman', Times, serif;
+  color:rgb(21, 50, 180);
+  font-size: 100px;
+}
+.btn{
+  border-radius: 10px;
+  color: red;
+  font-size: 135%;
+  padding: 10px 20px;
+  border: 2px solid yellow;
+  text-decoration: none;
+}
+.btn:hover{
+  color: #fff;
+  border: 2px solid purple;
+}
