@@ -40,6 +40,6 @@ background-color: aquamarine;
   text-decoration: none;
 }
 .btn:hover{
-  color: #fff;
+  color: green;
   border: 2px solid purple;
 }
