@@ -29,7 +29,7 @@ function _(x){
 };
 function renderQuestion(){
   test=_("test");
-  if(pos>=questions.lenght){
+  if(pos>=questions.length){
     test.innerHTML = "<h2> You Got "+correct+" of "+questions.length+" question correct <h2>";
     _("test_status").innerHTML = "Test Completed";
     pos=0;
@@ -48,18 +48,15 @@ function renderQuestion(){
   test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer </button>";
 }
 
-function checkAnswer(){
-  choices = document.getElementsByName("choices");
-  for (var i=0; i< choices.lenght; i++){
-    if(choices[i].checked){
-      choice = choices[i].value;
-    }
+function checkAnswer() {
+  choice = $("input[name='choices']:checked").val();
+console.log(choice);
+  if(choice == questions[pos][4]) {
+    correct++
   }
-  if(choice == questions[pos][4]){
-    correct++;
-  }
-pos++;
-renderQuestion();
+  pos++
+  renderQuestion();  
+
 }
 window.addEventListener("load", renderQuestion, false);
 
